@@ -1,75 +1,71 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiitus Maukonen - Oma Sivusto</title>
-    <style>
-        /* Tyylisäännöt */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .hobby {
-            font-style: italic;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oma Portfolio</title>
+  <style>
+    /* Tyylit voivat olla täällä */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    header {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Tiitus Maukonen</h1>
-    </header>
-    <div class="container">
-        <h2>Tietoa minusta</h2>
-        <p>Olen Tiitus Maukonen, koodauksen opiskelija Careeriassa.</p>
-        <ul>
-            <li><strong>Nimi:</strong> Tiitus Maukonen</li>
-            <li><strong>Sähköposti:</strong> tiitug@outlook.com</li>
-            <li><strong>Puhelin:</strong> 044 2305463</li>
-            <li><strong>Harrastukset:</strong>
-                <ul>
-                    <li class="hobby">Ohjelmointi</li>
-                    <li class="hobby">Valokuvaus</li>
-                    <li class="hobby">Lenkkeily</li>
-                </ul>
-            </li>
-        </ul>
+  <header>
+    <h1>Oma Portfolio</h1>
+    <p>Tervetuloa sivulleni!</p>
+  </header>
+
+  <div class="container">
+    <h2>Galleria</h2>
+    <div class="gallery">
+      <img src="kuva1.jpg" alt="Kuva 1">
+      <img src="kuva2.jpg" alt="Kuva 2">
+      <img src="kuva3.jpg" alt="Kuva 3">
+      <!-- Lisää kuvia tarvittaessa -->
     </div>
-    <footer>
-        <p> &copy; 2024 Tiitus Maukonen</p>
-    </footer>
+
+    <h2>Yhteystiedot</h2>
+    <p>Nimi: John Doe</p>
+    <p>Sähköposti: john.doe@example.com</p>
+    <p>Puhelin: 123-456-789</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Oma Portfolio</p>
+  </footer>
 </body>
 </html>
