@@ -9,36 +9,36 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('winter-lake.jpg'); /* Lisää tähän haluamasi taustakuva */
+      background-image: url('winter-lake.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
     header {
-      background-color: rgba(0, 123, 255, 0.7); /* Lisätty läpinäkyvyys */
-      color: #fff;
-      text-align: center;
-      padding: 2rem;
+      display: none;
     }
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.7); /* Lisätty läpinäkyvyys */
+      background-color: rgba(255, 255, 255, 0.7);
       border-radius: 10px;
     }
     .tab-content {
       display: none;
     }
     footer {
-      background-color: rgba(52, 58, 64, 0.7); /* Lisätty läpinäkyvyys */
+      background-color: rgba(52, 58, 64, 0.7);
       color: #fff;
       text-align: center;
       padding: 1rem;
       position: fixed;
       bottom: 0;
       width: 100%;
+    }
+    .button-container {
+      margin-top: 20px;
     }
     .button {
       background-color: #007bff;
@@ -47,39 +47,20 @@
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
-      display: inline-block;
+      display: block;
       font-size: 16px;
-      margin: 4px 2px;
+      margin: 10px auto;
       cursor: pointer;
       border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
     .button:hover {
       background-color: #0056b3;
     }
-    .rotate {
-      animation: rotation 2s infinite linear;
-    }
-    @keyframes rotation {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Oma Portfolio</h1>
-    <p>Tervetuloa sivulleni!</p>
-  </header>
-
   <div class="container">
-    <button class="button" onclick="openTab('portfolio')">Portfolio</button>
-    <button class="button" onclick="openTab('contact')">Yhteystiedot</button>
-    <button class="button" onclick="openTab('hobbies')">Harrastukset</button>
-
     <div class="tab-content" id="portfolio">
       <h2>Portfolio</h2>
       <p>Tähän voit lisätä tietoa ja esimerkkejä aiemmista töistäsi.</p>
@@ -96,6 +77,12 @@
       <h2>Harrastukset</h2>
       <p>Tähän voit lisätä tietoa omista harrastuksistasi.</p>
     </div>
+
+    <div class="button-container">
+      <button class="button" onclick="scrollToContent('portfolio')">Portfolio</button>
+      <button class="button" onclick="scrollToContent('contact')">Yhteystiedot</button>
+      <button class="button" onclick="scrollToContent('hobbies')">Harrastukset</button>
+    </div>
   </div>
 
   <footer>
@@ -103,15 +90,11 @@
   </footer>
 
   <script>
-    function openTab(tabName) {
-      var i, tabContent;
-      tabContent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].style.display = "none";
-      }
-      document.getElementById(tabName).style.display = "block";
+    function scrollToContent(tabName) {
+      var content = document.getElementById(tabName);
+      content.style.display = "block";
+      content.scrollIntoView({ behavior: 'smooth' });
     }
-    openTab('portfolio'); // Näytetään oletuksena ensimmäinen välilehti
   </script>
 </body>
 </html>
