@@ -21,6 +21,7 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      text-align: center;
     }
     .tab-content {
       display: none;
@@ -34,6 +35,33 @@
       bottom: 0;
       width: 100%;
     }
+    .button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .rotate {
+      animation: rotation 2s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -43,8 +71,9 @@
   </header>
 
   <div class="container">
-    <button onclick="openTab('portfolio')">Portfolio</button>
-    <button onclick="openTab('contact')">Yhteystiedot</button>
+    <button class="button" onclick="openTab('portfolio')">Portfolio</button>
+    <button class="button" onclick="openTab('contact')">Yhteystiedot</button>
+    <button class="button rotate" onclick="openTab('hobbies')">Harrastukset</button>
 
     <div class="tab-content" id="portfolio">
       <h2>Portfolio</h2>
@@ -56,6 +85,11 @@
       <p>Nimi: John Doe</p>
       <p>Sähköposti: john.doe@example.com</p>
       <p>Puhelin: 123-456-789</p>
+    </div>
+
+    <div class="tab-content" id="hobbies">
+      <h2>Harrastukset</h2>
+      <p>Tähän voit lisätä tietoa omista harrastuksistasi.</p>
     </div>
   </div>
 
