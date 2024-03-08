@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiituksen sivu</title>
+  <title>Tiituksen Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,21 +14,24 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    header {
+    .header {
       text-align: center;
+      padding: 50px 0;
     }
     h1 {
-      font-size: 36px;
-      font-family: "Times New Roman", Times, serif; /* Käytetään Times New Roman -fonttia */
+      font-size: 48px;
+      font-family: "Times New Roman", Times, serif; 
       margin-bottom: 20px;
+      color: #fff;
     }
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.7);
+      text-align: justify;
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
     }
     .tab-content {
       display: none;
@@ -37,23 +40,24 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: rgba(52, 58, 64, 0.7);
+      background-color: rgba(52, 58, 64, 0.9);
       color: #fff;
       text-align: center;
-      padding: 1rem;
+      padding: 20px 0;
     }
     .button-container {
-      margin-top: 20px;
+      margin-top: 30px;
+      text-align: center;
     }
     .button {
       background-color: #007bff;
       color: #fff;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 24px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 16px;
+      font-size: 18px;
       margin: 10px;
       cursor: pointer;
       border-radius: 5px;
@@ -65,22 +69,19 @@
     .button:active {
       transform: translateY(2px);
     }
-    .close-button {
-      background-color: #dc3545;
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tiituksen sivu</h1>
-  </header>
+  <div class="header">
+    <h1>Tiituksen Portfolio</h1>
+  </div>
 
   <div class="container">
     <div class="tab-content" id="portfolio">
       <h2>Portfolio</h2>
       <p>
-        Markiisifirma (kesä 2023)<br>
-        Työskentelin markiisifirmassa 2023 kesän ajan, jossa pääasiallinen vastuuni oli avustaa markiisien asennuksessa. Tehtäviini kuului monenlaista toimintaa, kuten:
+        <strong>Markiisifirma (Kesä 2023)</strong><br>
+        Työskentelin markiisifirmassa kesän 2023 ajan, jossa pääasiallinen vastuuni oli avustaa markiisien asennuksessa. Tehtäviini kuului monenlaista toimintaa, kuten:
         <ul>
           <li>Osallistuminen markiisien kuljetukseen ja varastointiin.</li>
           <li>Apu markiisien kokoonpanossa ja valmistelussa asennusta varten.</li>
@@ -93,9 +94,9 @@
 
     <div class="tab-content" id="contact">
       <h2>Yhteystiedot</h2>
-      <p>Nimi: Tiitus Maukonen</p>
-      <p>Sähköposti: tiitug@outlook.com</p>
-      <p>Puhelin: 044 2305463</p>
+      <p><strong>Nimi:</strong> Tiitus Maukonen</p>
+      <p><strong>Sähköposti:</strong> tiitug@outlook.com</p>
+      <p><strong>Puhelin:</strong> 044 2305463</p>
     </div>
 
     <div class="tab-content" id="hobbies">
@@ -111,7 +112,7 @@
   </div>
 
   <div class="footer-container">
-    <p>&copy; 2024 Oma Portfolio</p>
+    <p>&copy; 2024 Tiituksen Portfolio</p>
   </div>
 
   <script>
