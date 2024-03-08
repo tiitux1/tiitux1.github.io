@@ -9,10 +9,13 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
+      background-image: url('winter.jpg'); /* Lisää tähän haluamasi taustakuva */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
     header {
-      background-color: #007bff;
+      background-color: rgba(0, 123, 255, 0.7); /* Lisätty läpinäkyvyys */
       color: #fff;
       text-align: center;
       padding: 2rem;
@@ -22,12 +25,14 @@
       margin: 0 auto;
       padding: 20px;
       text-align: center;
+      background-color: rgba(255, 255, 255, 0.7); /* Lisätty läpinäkyvyys */
+      border-radius: 10px;
     }
     .tab-content {
       display: none;
     }
     footer {
-      background-color: #343a40;
+      background-color: rgba(52, 58, 64, 0.7); /* Lisätty läpinäkyvyys */
       color: #fff;
       text-align: center;
       padding: 1rem;
@@ -73,7 +78,7 @@
   <div class="container">
     <button class="button" onclick="openTab('portfolio')">Portfolio</button>
     <button class="button" onclick="openTab('contact')">Yhteystiedot</button>
-    <button class="button rotate" onclick="openTab('hobbies')">Harrastukset</button>
+    <button class="button" onclick="openTab('hobbies')">Harrastukset</button>
 
     <div class="tab-content" id="portfolio">
       <h2>Portfolio</h2>
