@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oma Portfolio</title>
   <style>
-    /* Tyylit voivat olla täällä */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -23,14 +22,8 @@
       margin: 0 auto;
       padding: 20px;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-gap: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
+    .tab-content {
+      display: none;
     }
     footer {
       background-color: #343a40;
@@ -50,22 +43,36 @@
   </header>
 
   <div class="container">
-    <h2>Galleria</h2>
-    <div class="gallery">
-      <img src="kuva1.jpg" alt="Kuva 1">
-      <img src="kuva2.jpg" alt="Kuva 2">
-      <img src="kuva3.jpg" alt="Kuva 3">
-      <!-- Lisää kuvia tarvittaessa -->
+    <button onclick="openTab('portfolio')">Portfolio</button>
+    <button onclick="openTab('contact')">Yhteystiedot</button>
+
+    <div class="tab-content" id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Tähän voit lisätä tietoa ja esimerkkejä aiemmista töistäsi.</p>
     </div>
 
-    <h2>Yhteystiedot</h2>
-    <p>Nimi: John Doe</p>
-    <p>Sähköposti: john.doe@example.com</p>
-    <p>Puhelin: 123-456-789</p>
+    <div class="tab-content" id="contact">
+      <h2>Yhteystiedot</h2>
+      <p>Nimi: John Doe</p>
+      <p>Sähköposti: john.doe@example.com</p>
+      <p>Puhelin: 123-456-789</p>
+    </div>
   </div>
 
   <footer>
     <p>&copy; 2024 Oma Portfolio</p>
   </footer>
+
+  <script>
+    function openTab(tabName) {
+      var i, tabContent;
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+    openTab('portfolio'); // Näytetään oletuksena ensimmäinen välilehti
+  </script>
 </body>
 </html>
