@@ -14,9 +14,6 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    header {
-      display: none;
-    }
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -47,9 +44,9 @@
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
-      display: block;
+      display: inline-block;
       font-size: 16px;
-      margin: 10px auto;
+      margin: 10px;
       cursor: pointer;
       border-radius: 5px;
       transition: background-color 0.3s ease, transform 0.1s;
@@ -63,6 +60,10 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>Tiituksen sivu</h1>
+  </header>
+
   <div class="container">
     <div class="tab-content" id="portfolio">
       <h2>Portfolio</h2>
@@ -82,9 +83,9 @@
     </div>
 
     <div class="button-container">
-      <button class="button" onclick="scrollToContent('portfolio')">Portfolio</button>
-      <button class="button" onclick="scrollToContent('contact')">Yhteystiedot</button>
-      <button class="button" onclick="scrollToContent('hobbies')">Harrastukset</button>
+      <button class="button" onclick="showContent('portfolio')">Portfolio</button>
+      <button class="button" onclick="showContent('contact')">Yhteystiedot</button>
+      <button class="button" onclick="showContent('hobbies')">Harrastukset</button>
     </div>
   </div>
 
@@ -93,10 +94,9 @@
   </footer>
 
   <script>
-    function scrollToContent(tabName) {
+    function showContent(tabName) {
       var content = document.getElementById(tabName);
       content.style.display = "block";
-      content.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 </body>
